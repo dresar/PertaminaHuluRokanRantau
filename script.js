@@ -16,29 +16,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+    //document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //anchor.addEventListener('click', function(e) {
+            //e.preventDefault();
             
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
+           // const target = document.querySelector(this.getAttribute('href'));
+           // if (target) {
+                //window.scrollTo({
+                 //   top: target.offsetTop - 80,
+                 //   behavior: 'smooth'
                 });
             }
         });
     });
     
     // About Video Modal
-    const aboutVideoBtn = document.getElementById('aboutVideoBtn');
-    const videoModal = document.getElementById('videoModal');
+   // const aboutVideoBtn = document.getElementById('aboutVideoBtn');
+   // const videoModal = document.getElementById('videoModal');
     
-    if (aboutVideoBtn && videoModal) {
-        const videoFrame = videoModal.querySelector('iframe');
-        const modalClose = videoModal.querySelector('.modal-close');
-        
-        aboutVideoBtn.addEventListener('click', function() {
+   // if (aboutVideoBtn && videoModal) {
+      //  const videoFrame = videoModal.querySelector('iframe');
+       // const modalClose = videoModal.querySelector('.modal-close');
+       / 
+      //  aboutVideoBtn.addEventListener('click', function() {
             // Replace 'about:blank' with a real YouTube video URL for production
             videoFrame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
             videoModal.style.display = 'block';
@@ -217,12 +217,12 @@ function initTabs() {
 }
 
 // ======= CHART INITIALIZATION =======
-function initCharts() {
+/function initCharts() {
     // Initialize Chart.js
     initMainRevenueChart();
     initRevenueCompositionChart();
     initOperatingMarginChart();
-    initYearComparisonChart();
+   / initYearComparisonChart();
     initSegmentCharts();
     initOperationalCharts();
     initFinancialCharts();
@@ -230,7 +230,7 @@ function initCharts() {
     initRatioCharts();
 }
 
-function initMainRevenueChart() {
+/function initMainRevenueChart() {
     const ctx = document.getElementById('mainRevenueChart').getContext('2d');
     
     // Sample data
@@ -261,7 +261,7 @@ function initMainRevenueChart() {
                     backgroundColor: 'rgba(245, 130, 31, 0.1)',
                     borderWidth: 2,
                     pointBackgroundColor: 'rgba(245, 130, 31, 1)',
-                    tension: 0.4,
+                 /   tension: 0.4,
                     order: 0,
                     yAxisID: 'y1'
                 },
@@ -282,7 +282,7 @@ function initMainRevenueChart() {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+           / maintainAspectRatio: false,
             plugins: {
                 legend: {
                     position: 'top',
@@ -352,7 +352,7 @@ function initMainRevenueChart() {
                 mainRevenueChart.data.datasets[0].type = 'bar';
             } else if (chartType === 'area') {
                 mainRevenueChart.data.datasets[0].type = 'line';
-                mainRevenueChart.data.datasets[0].fill = true;
+                //mainRevenueChart.data.datasets[0].fill = true;
                 mainRevenueChart.data.datasets[0].tension = 0.4;
                 mainRevenueChart.data.datasets[1].fill = true;
                 mainRevenueChart.data.datasets[2].fill = true;
